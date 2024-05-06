@@ -11,7 +11,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private RecyclerViewAdapter adapter;
     private Gson gson;
@@ -27,9 +27,10 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         items = new ArrayList<>(Arrays.asList(
-                new RecyclerViewItem("mountain1"),
-                new RecyclerViewItem("mountain2"),
-                new RecyclerViewItem("mountain3")));
+                new RecyclerViewItem("potato1"),
+                new RecyclerViewItem("potato2"),
+                new RecyclerViewItem("potato3")));
+
         adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
 
             @Override
@@ -38,10 +39,5 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
-
-
     }
-
-
 }
