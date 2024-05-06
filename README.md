@@ -3,15 +3,37 @@
 
 **Skriv din rapport här!**
 
-_Du kan ta bort all text som finns sedan tidigare_.
+Skiss/design-idé
 
-## Följande grundsyn gäller dugga-svar:
 
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
+
+**Webbtjänst - JSON**
+
+Data skrevs in i webbtjänsten som vi fått, admingränssnittet, där datan applicerades på den 
+rubrik som innehöll den datatyp som passade. exempelvis sattes mognadstid till size, även om den
+inte explicivt passar under rubriken, då datatypen passade. Detta eftersom vi oavsätt kommer ändra 
+namnet på deras koppling, och ersätta size med exempelvis mognadstid i presentationen på appen.
+
+
+
+
+**Implementationsexempel**
+
+
+
+**Implementationsexempel VG (för de som satsar på VG)**
+
+            // ingen VG!
+
+
+**Reflektion**
+
+
+
+
+
+
+
 
 Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
 
