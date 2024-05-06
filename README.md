@@ -33,6 +33,15 @@ Resource File, där jag även gjorde denna till en Linear Layout.
 Lade till en ny class, RecyclerViewAdapter, som används som en adapter för RecyclerViewn. I denna 
 lade jag till koden som finns på canvas, som jag modifierade för att passa mitt specifika project.
 
+Eftersom vi använder dem datanamn som finns i admingränssnittet, ändrar jag namnen på variablerna via
+SerializedName. Detta för att bättre passa den data som jag valt, som är potatisar. Ett exempel kan ses
+i koden nedan.
+```
+@SerializedName("name")
+private String title;
+```
+
+
 
 **Implementationsexempel**
 
