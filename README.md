@@ -14,7 +14,21 @@ rubrik som innehöll den datatyp som passade. exempelvis sattes mognadstid till 
 inte explicivt passar under rubriken, då datatypen passade. Detta eftersom vi oavsätt kommer ändra 
 namnet på deras koppling, och ersätta size med exempelvis mognadstid i presentationen på appen.
 
-
+**Övrig text om implementationen**
+Lade till en recyclerview i activity_main. Tog även bort textviewn som fanns där vid forkningen 
+av appen.
+```
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/recycler_view"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintLeft_toLeftOf="parent"
+app:layout_constraintRight_toRightOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
+```
+Skapar en ny layout, recyclerviewitem, som innehåller en textview. Detta genom Layout > new > Layout
+Resource File, där jag även gjorde denna till en Linear Layout.
 
 
 **Implementationsexempel**
