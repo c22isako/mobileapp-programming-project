@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setContentView(R.layout.activity_main);
 
         gson = new Gson();
-        new JsonTask(this).execute(JSON_URL);
 
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
@@ -59,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         view.setAdapter(adapter);
 
         Log.d("potato", "Has run");
+
+        new JsonTask(this).execute(JSON_URL);
 
     }
 

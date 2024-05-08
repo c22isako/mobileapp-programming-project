@@ -3,12 +3,12 @@ package com.example.project;
 import com.google.gson.annotations.SerializedName;
 
 public class RecyclerViewItem {
-    @SerializedName("name") // name
+        @SerializedName("name") // name
         private String title;
         private String ID; // Unused
-        @SerializedName("Company") // Growth months
+        @SerializedName("size") // Growth months
         private int size;
-        @SerializedName("size") // time in weeks to grow
+        @SerializedName("company") // time in weeks to grow
         private String company;
         @SerializedName("location") // Color
         private String location;
@@ -78,15 +78,11 @@ public class RecyclerViewItem {
 
     @Override
     public String toString() {
-        return "RecyclerViewItem{" +
-                "title='" + title + '\'' +
-                ", ID='" + ID + '\'' +
-                ", size=" + size +
-                ", company='" + company + '\'' +
-                ", location='" + location + '\'' +
-                ", category='" + category + '\'' +
-                ", cost=" + cost +
-                '}';
+        return "Potato" + '\n' + "Name: " + title + '\n' +
+                "Weeks to mature: " + size + '\n' +
+                "Harvest months: " + company + '\n' +
+                "Color: " + location + '\n' +
+                "Form: " + category + '\n';
     }
 }
 

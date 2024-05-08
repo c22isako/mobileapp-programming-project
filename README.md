@@ -52,7 +52,7 @@ items.clear();
 items.addAll(newRecyclerItemList);
 notifyDataSetChanged();
 ```
-
+Fixade så att namnen överänsstämde admingränssnittets namn, vilket gav oss rätt information på sidan.
 
 
 **Implementationsexempel**
