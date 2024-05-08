@@ -1,6 +1,7 @@
 package com.example.project;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,20 +33,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.title.setText(items.get(position).getTitle());
+        holder.title.setText(items.get(position).toString());
     }
 
     @Override
     public int getItemCount() {
         return items.size();
-    }
-
-    public void UpdateData(ArrayList<RecyclerViewItem> newRecyclerItemList) {
-
-        items.clear();
-        items.addAll(newRecyclerItemList);
-        notifyDataSetChanged();
-
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -54,7 +47,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ViewHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
-            title = itemView.findViewById(R.id.title);
+            title = itemView.findViewById(R.id.TextViewRecyclerThing);
         }
 
         @Override
@@ -66,4 +59,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public interface OnClickListener {
         void onClick(RecyclerViewItem item);
     }
+
+    public void UpdateData(ArrayList<RecyclerViewItem> newRecyclerItemList) {
+
+        Log.d("potato", "RecyclerViewAdapter has run, but clear etc");
+
+        items.clear();
+        items.addAll(newRecyclerItemList);
+        notifyDataSetChanged();
+
+    }
+
+
 }

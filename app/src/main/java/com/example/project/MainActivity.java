@@ -19,25 +19,31 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     private RecyclerViewAdapter adapter;
     private Gson gson;
-    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=brom";
-    private final String JSON_FILE = "mountains.json";
-    private ArrayList items;
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=c22isako";
+    private ArrayList <RecyclerViewItem> items = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        //String json = gson.toJson(items);
+        gson = new Gson();
+        new JsonTask(this).execute(JSON_URL);
+
+        //Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         items = new ArrayList<>(Arrays.asList(
                 new RecyclerViewItem("potato1"),
                 new RecyclerViewItem("potato2"),
                 new RecyclerViewItem("potato3")));
 
-        gson = new Gson();
+        String json = gson.toJson(items);
+
+        for(int i = 0; i< items.size(); i++) {
+            Log.d("potato", items.get(i).getTitle());
+        }
         adapter = new RecyclerViewAdapter(this, items, new RecyclerViewAdapter.OnClickListener() {
 
             @Override
@@ -54,13 +60,12 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         Log.d("potato", "Has run");
 
-        new JsonTask(this).execute(JSON_URL);
-
     }
 
     @Override
     public void onPostExecute(String json) {
         Log.d("MainActivity", json);
+        Log.d("potato", "onPostExecute in Main");
         Type type = new TypeToken<ArrayList<RecyclerViewItem>>(){}.getType();
 
         items = gson.fromJson(json, type);
@@ -73,8 +78,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         // Mountain mountain = gson.fromJson(json, Mountain.class);
 
+        Log.d("potato", "Before update Data");
         adapter.UpdateData(items);
 
     }
-
 }

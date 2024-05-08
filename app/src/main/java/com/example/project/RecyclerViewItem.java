@@ -3,19 +3,18 @@ package com.example.project;
 import com.google.gson.annotations.SerializedName;
 
 public class RecyclerViewItem {
-
-        @SerializedName("name")
+    @SerializedName("name") // name
         private String title;
-        private String ID;
-        @SerializedName("growth")
-        private String Size;
-        @SerializedName("maturityWeeks")
+        private String ID; // Unused
+        @SerializedName("Company") // Growth months
+        private int size;
+        @SerializedName("size") // time in weeks to grow
         private String company;
-        @SerializedName("color")
+        @SerializedName("location") // Color
         private String location;
-        @SerializedName("form")
-        private int category;
-        private int cost;
+        @SerializedName("category") // Form
+        private String category;
+        private int cost; // Unused
 
         public int getCost() {
             return cost;
@@ -25,12 +24,12 @@ public class RecyclerViewItem {
         this.title = title;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public String getID() {
@@ -41,12 +40,12 @@ public class RecyclerViewItem {
         this.ID = ID;
     }
 
-    public String getSize() {
-        return Size;
-    }
 
     public void setSize(String size) {
-        Size = size;
+        size = size;
+    }
+    public int getSize() {
+        return size;
     }
 
     public String getCompany() {
@@ -65,7 +64,7 @@ public class RecyclerViewItem {
         this.location = location;
     }
 
-    public int getCategory() {
+    public String getCategory() {
         return category;
     }
 
@@ -80,12 +79,12 @@ public class RecyclerViewItem {
     @Override
     public String toString() {
         return "RecyclerViewItem{" +
-                "Potato name: '" + title + '\'' +
+                "title='" + title + '\'' +
                 ", ID='" + ID + '\'' +
-                ", Growth in weeks: '" + Size + '\'' +
-                ", MaturityWeeks: '" + company + '\'' +
-                ", Color: '" + location + '\'' +
-                ", Form: " + category +
+                ", size=" + size +
+                ", company='" + company + '\'' +
+                ", location='" + location + '\'' +
+                ", category='" + category + '\'' +
                 ", cost=" + cost +
                 '}';
     }
