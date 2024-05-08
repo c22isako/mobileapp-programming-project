@@ -40,6 +40,18 @@ i koden nedan.
 @SerializedName("name")
 private String title;
 ```
+Skapade en JsonTask class, som vi pastear in koden ifrån canvas på.
+
+Lade till så att MainActivity implementerar JsonTask.JsonTaskListener, vilket också gav oss metoden
+onPostExecute.
+
+Därefter lade vi till en "UpdateData" i RecyclerViewAdapter, som ska hantera all uppdatering av datan
+genom koden nedan
+```
+items.clear();
+items.addAll(newRecyclerItemList);
+notifyDataSetChanged();
+```
 
 
 
