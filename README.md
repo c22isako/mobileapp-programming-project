@@ -52,6 +52,30 @@ items.clear();
 items.addAll(newRecyclerItemList);
 notifyDataSetChanged();
 ```
+
+Lade till en knapp, som jag sedan anpassade recyclerview till genom constraints. Detta gjorde att 
+recyclerview håller sig under knappen. Jag märkte dock att recyclerview kapar av viss text i slutet,
+vilket jag fixade genom att sätta en padding på "bottom".
+
+```
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:text="ABOUT"
+        android:id="@+id/aboutButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+```
+```
+    <androidx.recyclerview.widget.RecyclerView
+        ...
+        android:paddingBottom="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/aboutButton"
+        ... />
+```
+
 Fixade så att namnen överänsstämde admingränssnittets namn, vilket gav oss rätt information på sidan.
 
 
