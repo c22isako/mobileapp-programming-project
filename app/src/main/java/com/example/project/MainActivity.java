@@ -1,7 +1,10 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -30,6 +33,20 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         gson = new Gson();
 
+        Button aboutButtonMain = findViewById(R.id.aboutButton);
+        aboutButtonMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+                //intent.putExtra("potatoType", "King Edward"); // Optional
+                //intent.putExtra("anyNumber", 7); // Optional
+
+                startActivity(intent);
+            }
+        });
+
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
@@ -53,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         });
 
 
+
         RecyclerView view = findViewById(R.id.recycler_view);
         view.setLayoutManager(new LinearLayoutManager(this));
         view.setAdapter(adapter);
@@ -60,7 +78,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Log.d("potato", "Has run");
 
         new JsonTask(this).execute(JSON_URL);
-
     }
 
     @Override
@@ -83,4 +100,5 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         adapter.UpdateData(items);
 
     }
+
 }

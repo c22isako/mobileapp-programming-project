@@ -11,14 +11,17 @@ public class SecondActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_second);
 
-            Bundle extras = getIntent().getExtras();
-            if (extras != null) {
-                String type = extras.getString("potatoType");
-                int number = extras.getInt("anyNumber");
+            //Bundle extras = getIntent().getExtras();
+            /*if (extras != null) {
+                //String type = extras.getString("potatoType");
+                //int number = extras.getInt("anyNumber");
 
                 TextView ExtrasTextView = findViewById(R.id.secondActivityTextView);
-                ExtrasTextView.setText("Potatos are great. Especially the type " + type + ". And Atleast " + number + " Each meal.");
+                ExtrasTextView.setText("Potatos are great. Especially the type " + ". And Atleast " + " Each meal.");
 
             }
+
+             */
+
         }
 }
