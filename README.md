@@ -52,6 +52,7 @@ items.clear();
 items.addAll(newRecyclerItemList);
 notifyDataSetChanged();
 ```
+Fixade så att namnen överänsstämde admingränssnittets namn, vilket gav oss rätt information på sidan.
 
 Lade till en knapp, som jag sedan anpassade recyclerview till genom constraints. Detta gjorde att 
 recyclerview håller sig under knappen. Jag märkte dock att recyclerview kapar av viss text i slutet,
@@ -75,10 +76,25 @@ vilket jag fixade genom att sätta en padding på "bottom".
         app:layout_constraintTop_toBottomOf="@+id/aboutButton"
         ... />
 ```
+Lade till en WebView i oncreate i activity_Second, vilket innebär att webviewn startas så snart 
+activity_second körs, vilket därmed visar aboutme-sidan. Jag skapade även en WebView widget 
+(igentligen först)
+```
+<WebView
+android:id="@+id/my_WebView"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+/>
+```
 
-Fixade så att namnen överänsstämde admingränssnittets namn, vilket gav oss rätt information på sidan.
+```
+WebView myWebView;
 
-
+        public void showInternalWebPage() {
+            // TODO: Add your code for showing internal web page here
+            myWebView.loadUrl("file:///android_asset/about.html");
+        }
+```
 **Implementationsexempel**
 
 

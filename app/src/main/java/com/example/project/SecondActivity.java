@@ -1,27 +1,29 @@
 package com.example.project;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {
+
+        WebView myWebView;
+
+        public void showInternalWebPage() {
+            // TODO: Add your code for showing internal web page here
+            myWebView.loadUrl("file:///android_asset/about.html");
+        }
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_second);
 
-            //Bundle extras = getIntent().getExtras();
-            /*if (extras != null) {
-                //String type = extras.getString("potatoType");
-                //int number = extras.getInt("anyNumber");
+            myWebView = findViewById(R.id.my_WebView);
 
-                TextView ExtrasTextView = findViewById(R.id.secondActivityTextView);
-                ExtrasTextView.setText("Potatos are great. Especially the type " + ". And Atleast " + " Each meal.");
-
-            }
-
-             */
-
+            showInternalWebPage();
         }
+
 }
