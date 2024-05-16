@@ -39,13 +39,11 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-
-                //intent.putExtra("potatoType", "King Edward"); // Optional
-                //intent.putExtra("anyNumber", 7); // Optional
-
                 startActivity(intent);
             }
         });
+
+
 
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
@@ -68,8 +66,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
             }
 
         });
-
-
 
         RecyclerView view = findViewById(R.id.recycler_view);
         view.setLayoutManager(new LinearLayoutManager(this));
