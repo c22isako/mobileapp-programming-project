@@ -54,21 +54,17 @@
             />
 
     <ImageView
-        android:layout_width="81dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="560dp"
+
+        android:layout_width="232dp"
+
+        android:layout_height="539dp"
+        android:layout_marginLeft="176dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboutButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/recycler_view"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/potato2"
-        tools:ignore="MissingConstraints" />
-    />
 
 
+        app:srcCompat="@drawable/potatoes2"
+        tools:layout_editor_absoluteY="65dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
