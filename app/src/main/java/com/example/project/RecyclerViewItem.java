@@ -78,10 +78,10 @@ public class RecyclerViewItem {
 
     @Override
     public String toString() {
-        return  "Name: " + title + '\n' +
-                "Weeks to mature: " + size + '\n' +
-                "Harvest months: " + company + '\n' +
-                "Color: " + location + '\n' +
+        return  "Namn: " + title + '\n' +
+                "Tillväxt: " + size + '\n' +
+                "Skördemånader: " + company + '\n' +
+                "Färg: " + location + '\n' +
                 "Form: " + category + '\n';
     }
 }
