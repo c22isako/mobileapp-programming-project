@@ -7,8 +7,6 @@
     tools:context=".MainActivity"
     android:background="#FFE8C8"
     >
-
-
     <!--
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -35,7 +33,6 @@
 
             android:text="ABOUT"
             android:textColor="#ae6700"
-
             android:id="@+id/aboutButton"
 
             app:layout_constraintTop_toTopOf="parent"
@@ -53,6 +50,7 @@
             app:layout_constraintTop_toBottomOf="@+id/aboutButton"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
+
             />
 
 
