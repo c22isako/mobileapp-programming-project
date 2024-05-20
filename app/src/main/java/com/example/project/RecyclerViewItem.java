@@ -78,7 +78,7 @@ public class RecyclerViewItem {
 
     @Override
     public String toString() {
-        return "Potato" + '\n' + "Name: " + title + '\n' +
+        return  "Name: " + title + '\n' +
                 "Weeks to mature: " + size + '\n' +
                 "Harvest months: " + company + '\n' +
                 "Color: " + location + '\n' +

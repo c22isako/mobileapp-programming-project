@@ -20,6 +20,7 @@
         android:id="@+id/TextViewRecyclerThing"
         android:autoSizeMinTextSize="30dp"
         android:text="Hej"
+        android:textColor="#724a2b"
         />
 
 

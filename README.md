@@ -95,6 +95,8 @@ WebView myWebView;
             myWebView.loadUrl("file:///android_asset/about.html");
         }
 ```
+
+
 **Implementationsexempel**
 
 
